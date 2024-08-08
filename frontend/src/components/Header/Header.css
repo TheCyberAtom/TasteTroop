@@ -1,0 +1,67 @@
+.header {
+    display: flex;
+    width: 100%;
+}
+
+.header-left {
+    width: 60%;
+    padding-top: 12%;
+    animation: fadeIn 3s;
+}
+
+.header-left span {
+    padding: 3px 6px;
+    background-color: #f5dbd7;
+    color: var(--brand-color);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.header-left h2 {
+    font-size: 3rem;
+    margin: 25px 0;
+    white-space: nowrap;
+    line-height: 3.5rem;
+}
+
+.header-left p {
+    font-size: 16px;
+    width: 90%;
+    margin-top: 5%;
+}
+
+.header-left button {
+    margin-top: 25px;
+}
+
+.header-right {
+    width: 40%;
+    position: relative;
+}
+
+.header-right img {
+    width: 120%;
+    position: absolute;
+    right: -50px;
+    top: 5%;
+    animation: slideIn 1s cubic-bezier(0, 0.6, 0.63, 1.51);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}
