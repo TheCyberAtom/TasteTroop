@@ -40,7 +40,7 @@
 .menu-list-item p{
     margin-top: 10px;
     color: var(--dark-grey);
-    font-size: max(1.4vw, 16px);
+    font-size: max(1.2vw, 16px);
     cursor: pointer;
 }
 

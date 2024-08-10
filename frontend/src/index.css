@@ -11,7 +11,7 @@
 :root {
   --background: #efefef;
   --text-primary: #2a2a2a;
-  --text-secondary: #f0f0f0;
+  --text-secondary: #ffffff;
   --light-grey: #ced0ce;
   --dark-grey: #6e6e6e;
   --brand-color: #ef5241;
@@ -36,6 +36,7 @@ a {
 
 .app {
   width: 80%;
+  max-width: 100rem;
   margin: auto;
 }
 
@@ -75,13 +76,6 @@ a {
   box-shadow: 0px 1px 2px 1px var(--brand-color);
 }
 
-/* Responsive design */
-@media (min-width: 1441px){
-  .app{
-    width: 65%;
-    max-width: 110rem;
-  }
-}
 @media (max-width: 1050px) {
   .app {
     width: 85%;
