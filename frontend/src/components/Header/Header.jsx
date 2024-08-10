@@ -7,7 +7,7 @@ const Header = () => {
     <div className='header' id='header'>
       <div className="header-left">
         <span>Welcome to TasteTroop</span>
-        <h2>Delicious Food <br/> Delivered Fast & Fresh <br /> At Your Dorrstep</h2>
+        <h2>Delicious Food <br/> Delivered Fast & Fresh <br /> At Your Doorstep</h2>
         <p>Enjoy a hassle-free food ordering experience with quick delivery, diverse cuisine options, and secure payments.</p>
         <button className='primary-btn'>View Menu</button>
       </div>
