@@ -4,7 +4,7 @@ import { assets } from "../../assets/assets";
 
 const Header = () => {
   return (
-    <div className='header'>
+    <div className='header' id='header'>
       <div className="header-left">
         <span>Welcome to TasteTroop</span>
         <h2>Delicious Food <br/> Delivered Fast & Fresh <br /> At Your Dorrstep</h2>

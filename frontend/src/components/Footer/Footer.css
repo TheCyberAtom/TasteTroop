@@ -66,13 +66,14 @@
 
 /* Responsive Design */
 
-@media (max-width: 750px){
-    .footer-content{
+@media (max-width: 750px) {
+    .footer-content {
         display: flex;
         flex-direction: column;
         gap: 35px;
     }
-    .footer-copyright{
+
+    .footer-copyright {
         text-align: center;
     }
 }
