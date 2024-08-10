@@ -5,9 +5,10 @@ import { menu_list } from "../../assets/assets";
 const MenuList = ({ category, setCategory }) => {
   return (
     <div className="menu-container" id="menu-container">
-      <h1>Our Menu</h1>
+      <h1>Explore Our Menu</h1>
       <p className="menu-desc">
-        Choose a diverse menu featuring a delectable list of foods.
+        Choose a diverse menu featuring a delectable list of foods. Lorem, ipsum
+        dolor sit amet consectetur adipisicing elit. Odit, reiciendis.
       </p>
       <div className="menu-list">
         {menu_list.map((item, index) => {

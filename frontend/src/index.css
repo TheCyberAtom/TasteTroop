@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -15,6 +15,7 @@
   --dark-grey: #6e6e6e;
   --brand-color: #ef5241;
 }
+
 /* [data-theme='dark'] {
   --background: #2a2a2a;
   --text-primary: #f0f0f0;
@@ -22,16 +23,17 @@
   --brand-color: #ef5241;
 } */
 
-body{
+body {
   min-height: 100vh;
   background-color: var(--background);
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
-.app{
+
+.app {
   width: 80%;
   margin: auto;
 }
@@ -70,4 +72,23 @@ a{
   -webkit-box-shadow: 0px 1px 2px 1px var(--brand-color);
   -moz-box-shadow: 0px 1px 2px 1px var(--brand-color);
   box-shadow: 0px 1px 2px 1px var(--brand-color);
+}
+
+/* Responsive design */
+@media (min-width: 1441px){
+  .app{
+    width: 65%;
+    max-width: 110rem;
+  }
+}
+@media (max-width: 1050px) {
+  .app {
+    width: 85%;
+  }
+}
+
+@media (max-width: 750px) {
+  .app {
+    width: 90%;
+  }
 }
