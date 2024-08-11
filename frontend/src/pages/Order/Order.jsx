@@ -46,7 +46,7 @@ const Order = () => {
               </b>
             </div>
           </div>
-          <button className="primary-btn">Proceed To Checkout</button>
+          <button className="primary-btn">Continue To Payment</button>
         </div>
       </div>
     </form>

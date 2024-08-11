@@ -31,11 +31,18 @@
     gap: 10px;
 }
 
-.order-right{
+.order-right {
     width: 100%;
     max-width: max(40%, 500px);
 }
 
-.order .cart-total button{
+.order .cart-total button {
     margin-top: 15px;
+}
+
+@media (max-width: 750px) {
+    .order {
+        display: flex;
+        flex-direction: column;
+    }
 }
