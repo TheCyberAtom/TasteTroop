@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4%;
+}
+
+.navbar .admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-logo .logo {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.admin-text h2 {
+  font-size: 20px;
+}
+.admin-text p {
+  font-size: 16px;
+}
+
+.profile {
+  width: 50px;
+  border-radius: 50%;
+}

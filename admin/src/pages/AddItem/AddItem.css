@@ -1,0 +1,62 @@
+.additem {
+  width: 70%;
+  margin-left: max(5vw, 25px);
+  margin-top: 50px;
+  color: var(--dark-grey);
+  font-size: 16px;
+}
+
+.additem form {
+  gap: 20px;
+}
+
+.add-img-upload label {
+  height: 80px;
+  width: 120px;
+  border: 1px solid var(--dark-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-img-upload img {
+  height: 78px;
+  width: 118px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-product-name,
+.add-product-desc {
+  width: max(40%, 280px);
+}
+
+.add-product-name input,
+.add-product-desc textarea {
+  padding: 10px;
+}
+
+.add-category-price {
+  display: flex;
+  gap: 30px;
+}
+
+.add-category-price select,
+.add-category-price input {
+  max-width: 120px;
+  padding: 10px;
+}
+
+.add-btn {
+  max-width: 120px;
+  border: 1px solid var(--text-primary);
+  padding: 10px;
+  background-color: var(--text-primary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.add-btn:hover {
+  border: 1px solid var(--text-secondary);
+}
