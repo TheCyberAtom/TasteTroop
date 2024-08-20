@@ -4,8 +4,7 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const AddItem = () => {
-  const url = "http://localhost:4000";
+const AddItem = ({ url }) => {
   const [image, setImage] = useState(false);
   const [data, setData] = useState({
     name: "",
