@@ -13,14 +13,18 @@ function countReducer(state, action) {
 }
 
 const FoodItem = ({ id, name, price, desc, image }) => {
-  //   const [itemCount, setItemCount] = useState(0);
-  const [state, dispatch] = useReducer(countReducer, { itemCount: 0 });
-  const { cartItems, addToCart, removeFromCart } = useContext(StoreContext);
+  // const [state, dispatch] = useReducer(countReducer, { itemCount: 0 });
+  const { cartItems, addToCart, removeFromCart, url } =
+    useContext(StoreContext);
 
   return (
     <div className="food-item">
       <div className="food-item-image-container">
-        <img className="food-item-image" src={image} alt={name} />
+        <img
+          className="food-item-image"
+          src={url + "/images/" + image}
+          alt={name}
+        />
       </div>
       <div className="food-item-info">
         <div className="food-item-rating">
