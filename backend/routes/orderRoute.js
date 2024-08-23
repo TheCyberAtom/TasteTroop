@@ -10,6 +10,6 @@ const orderRouter = express.Router();
 
 orderRouter.post("/place", authMiddleware, placeOrder);
 orderRouter.post("/userorders", authMiddleware, userOrders);
-orderRouter.post("/listOrders", listOrders);
+orderRouter.get("/list", listOrders);
 
 export default orderRouter;
