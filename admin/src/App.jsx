@@ -5,7 +5,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import AddItem from "./pages/AddItem/AddItem";
 import ListItem from "./pages/ListItem/ListItem";
 import Orders from "./pages/Orders/Orders";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
