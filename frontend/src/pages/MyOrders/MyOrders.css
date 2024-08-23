@@ -42,6 +42,9 @@
   color: var(--text-secondary);
   cursor: pointer;
 }
+.myorders-order button:hover {
+  color: var(--text-primary);
+}
 
 @media (max-width: 900px) {
   .myorders-order {
