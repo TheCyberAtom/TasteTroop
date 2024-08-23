@@ -1,19 +1,9 @@
-import React, { useContext, useReducer, useState } from "react";
+import React, { useContext } from "react";
 import "./FoodItem.css";
 import { assets } from "../../assets/assets";
 import { StoreContext } from "../../context/StoreContext";
 
-function countReducer(state, action) {
-  if (action.type === "increment") {
-    return { itemCount: state.itemCount + 1 };
-  } else if (action.type === "decrement") {
-    return { itemCount: state.itemCount - 1 };
-  }
-  throw Error("Unknown action.");
-}
-
 const FoodItem = ({ id, name, price, desc, image }) => {
-  // const [state, dispatch] = useReducer(countReducer, { itemCount: 0 });
   const { cartItems, addToCart, removeFromCart, url } =
     useContext(StoreContext);
 
@@ -33,7 +23,7 @@ const FoodItem = ({ id, name, price, desc, image }) => {
         </div>
         <p className="food-item-desc">{desc}</p>
         <div className="food-item-pricing">
-          <p className="food-item-price">&#8377;{price * 49}</p>
+          <p className="food-item-price">&#8377;{price}</p>
           {!cartItems[id] ? (
             <button
               onClick={() => addToCart(id)}
