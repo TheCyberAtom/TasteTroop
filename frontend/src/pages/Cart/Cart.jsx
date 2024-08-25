@@ -4,8 +4,14 @@ import "./Cart.css";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { cartItems, foodList, removeFromCart, getTotalCartVal, url } =
-    useContext(StoreContext);
+  const {
+    cartItems,
+    foodList,
+    removeFromCart,
+    getTotalCartVal,
+    url,
+    freeDelPrice,
+  } = useContext(StoreContext);
 
   const navigate = useNavigate();
 
@@ -48,18 +54,27 @@ const Cart = () => {
           <div>
             <div className="cart-total-details">
               <p>Subtotal</p>
-              <p>&#8377;{getTotalCartVal() * 49}</p>
+              <p>&#8377;{getTotalCartVal()}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <p>Delivery Fee</p>
-              <p>&#8377;{getTotalCartVal() > 0 ? 59 : 0}</p>
+              {getTotalCartVal() < freeDelPrice ? (
+                <p>&#8377;{getTotalCartVal() > 0 ? 59 : 0}</p>
+              ) : (
+                <p>
+                  &#8377;<del>59</del>
+                </p>
+              )}
             </div>
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
               <b>
-                &#8377;{getTotalCartVal() > 0 ? getTotalCartVal() * 49 + 59 : 0}
+                &#8377;
+                {getTotalCartVal() > 0 && getTotalCartVal() < freeDelPrice
+                  ? getTotalCartVal() + 59
+                  : 0}
               </b>
             </div>
           </div>

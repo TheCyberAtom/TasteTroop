@@ -8,6 +8,7 @@ const StoreContextProvider = (props) => {
   const [token, setToken] = useState("");
   const [foodList, setFoodList] = useState([]);
   const url = "https://tastetroop-backend.onrender.com";
+  const freeDelPrice = 2499;
 
   const addToCart = async (itemId) => {
     if (!cartItems[itemId]) {
@@ -82,6 +83,7 @@ const StoreContextProvider = (props) => {
     url,
     token,
     setToken,
+    freeDelPrice,
   };
 
   return (
