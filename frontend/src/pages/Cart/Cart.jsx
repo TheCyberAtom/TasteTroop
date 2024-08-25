@@ -74,7 +74,7 @@ const Cart = () => {
                 &#8377;
                 {getTotalCartVal() > 0 && getTotalCartVal() < freeDelPrice
                   ? getTotalCartVal() + 59
-                  : 0}
+                  : getTotalCartVal()}
               </b>
             </div>
           </div>
