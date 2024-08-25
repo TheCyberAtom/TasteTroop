@@ -103,7 +103,7 @@ const AddItem = ({ url }) => {
               value={data.price}
               type="number"
               name="price"
-              placeholder="$00"
+              placeholder="&#8377;00"
             />
           </div>
         </div>
