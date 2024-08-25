@@ -7,7 +7,7 @@ const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
   const [token, setToken] = useState("");
   const [foodList, setFoodList] = useState([]);
-  const url = "https://tastetroop.onrender.com";
+  const url = "https://tastetroop-backend.onrender.com";
 
   const addToCart = async (itemId) => {
     if (!cartItems[itemId]) {
