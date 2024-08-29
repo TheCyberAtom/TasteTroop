@@ -12,15 +12,22 @@ const Footer = () => {
             <h1>TasteTroop</h1>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aut
-            quas rem consequuntur inventore nihil eligendi numquam, ipsum
-            consectetur incidunt fuga dolorem quisquam enim. Odio exercitationem
-            ab consequuntur? Odio, obcaecati.
+            TasteTroop is your go-to for exceptional meals from our single,
+            carefully curated restaurant. Enjoy a diverse menu featuring
+            expertly crafted dishes, delivered quickly and freshly to your home.
+            With TasteTroop, savor high-quality, restaurant-style dining without
+            stepping outside!
           </p>
           <div className="footer-social-icons">
             <img src={assets.facebook_icon} alt="" />
             <img src={assets.twitter_icon} alt="" />
-            <img src={assets.linkedin_icon} alt="" />
+            <a
+              href="https://www.linkedin.com/in/thecyberatom/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={assets.linkedin_icon} alt="" />
+            </a>
           </div>
         </div>
         <div className="footer-content-center">
