@@ -5,9 +5,16 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
-const Order = () => {
-  const { getTotalCartVal, token, foodList, cartItems, loadCartData, url } =
-    useContext(StoreContext);
+const Order = ({ setShowLogin }) => {
+  const {
+    getTotalCartVal,
+    token,
+    foodList,
+    cartItems,
+    loadCartData,
+    url,
+    freeDelPrice,
+  } = useContext(StoreContext);
   const navigate = useNavigate();
   const [data, setData] = useState({
     firstName: "",
@@ -62,8 +69,10 @@ const Order = () => {
 
   useEffect(() => {
     if (!token) {
+      setShowLogin(true);
       navigate("/cart");
     } else if (getTotalCartVal() === 0) {
+      toast.warning("Cart is Empty.");
       navigate("/cart");
     }
   }, [token]);
@@ -157,17 +166,28 @@ const Order = () => {
           <div>
             <div className="cart-total-details">
               <p>Subtotal</p>
-              <p>&#8377;{getTotalCartVal() * 49}</p>
+              <p>&#8377;{getTotalCartVal()}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <p>Delivery Fee</p>
-              <p>&#8377;{getTotalCartVal() > 0 ? 59 : 0}</p>
+              {getTotalCartVal() < freeDelPrice ? (
+                <p>&#8377;{getTotalCartVal() > 0 ? 59 : 0}</p>
+              ) : (
+                <p>
+                  &#8377;<del>59</del>
+                </p>
+              )}
             </div>
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
-              <b>&#8377;{getTotalCartVal() > 0 ? getTotalCartVal() + 59 : 0}</b>
+              <b>
+                &#8377;
+                {getTotalCartVal() > 0 && getTotalCartVal() < freeDelPrice
+                  ? getTotalCartVal() + 59
+                  : getTotalCartVal()}
+              </b>
             </div>
           </div>
           <button type="submit" className="primary-btn">
